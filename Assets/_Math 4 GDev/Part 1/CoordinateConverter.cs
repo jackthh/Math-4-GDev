@@ -50,5 +50,13 @@ namespace _Math_4_GDev.Part_1
 
             Debug.Log($"World Pos: {result}");
         }
+
+
+        [Button(ButtonSizes.Large)] public void LocalToWorldSmarter()
+        {
+            var worldOffset = localCoordinate.right * originalLocalPoint.x + localCoordinate.up * originalLocalPoint.y;
+
+            Debug.Log($"World Pos: {localCoordinate.position + worldOffset}");
+        }
     }
 }
